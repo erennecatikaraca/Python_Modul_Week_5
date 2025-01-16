@@ -92,6 +92,25 @@ my_school.view_teacher_list()
 
 # solution_3
 print("\n____________solution_3___________\n")
+class Shape():
+
+    def __init__(self, width, height):
+        self.width=width
+        self.height=height  
+
+class Rectangle(Shape):
+    def calculate_area(self):
+        return self.width * self.height
+    
+class Square(Shape):
+    def calculate_area(self):
+        return self.width ** 2
+    
+rectangle = Rectangle(30, 2)
+square = Square(3, 3)
+
+print(rectangle.calculate_area())
+print(square.calculate_area())
 
 # solution_4
 print("\n____________solution_4___________\n")
