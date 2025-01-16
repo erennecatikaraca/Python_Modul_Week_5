@@ -115,6 +115,36 @@ print(square.calculate_area())
 # solution_4
 print("\n____________solution_4___________\n")
 
+class Vehicle:
+    def __init__(self, make, model, year):
+        self.make = make
+        self.model = model
+        self.year = year
+
+
+class Off_Road_Vehicle(Vehicle):
+    def __init__(self, make, model, year, four_wheel_drive):
+        super().__init__(make, model, year)
+        self.fourwheeldrive = four_wheel_drive
+        if self.fourwheeldrive=="Yes":
+            self.fourwheeldrive="The vehicle has four-wheel drive."
+        else:
+            self.fourwheeldrive="The vehicle has not four-wheel drive."
+
+
+vehicle1=Off_Road_Vehicle("Toyota","Hilux","2010","No")
+print(f"Off Road Vehicle\nMake:{vehicle1.make}\nModel:{vehicle1.model}"
+      f"\nYear:{vehicle1.year}\nFour Wheel Drive:{vehicle1.fourwheeldrive}")
+class SportCar(Vehicle):
+    def __init__(self, make, model, year, max_speed):
+        super().__init__(make, model, year)
+        self.max_speed = max_speed
+
+sportCar1=SportCar("Porche","911 Turbo S","2024",330)
+
+print(f"\nSport Car\nMake:{sportCar1.make}\nModel:{sportCar1.model}"
+      f"\nYear:{sportCar1.year}\nMaximum Speed:{sportCar1.max_speed}")
+
 # solution_5
 print("\n____________solution_5___________\n")
 
